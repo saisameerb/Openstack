@@ -1,0 +1,17 @@
+# openstack_sample_vm
+
+Module to create a single VM instance in OpenStack.
+
+# Usage
+
+## Attributes
+
+## Usage Example
+
+    module "instance" "vm1" {
+      source = "git::http://stash.dev-charter.net/stash/scm/chef/terraform_modules.git//openstack_simple_vm"
+      vm-name = "sai-test1"
+      key-pair = "byreddy"
+      network-name = "kitchen-network"
+      floating-ip-pool = "EXT_VLAN308"
+    }
